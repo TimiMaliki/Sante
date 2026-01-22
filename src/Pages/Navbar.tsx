@@ -3,6 +3,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
 import Logo from "../assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "../shared/type";
+import useMediaQuery from "../hooks/mediaQuery";
+import { div } from "framer-motion/client";
 
 type Props = {
     selectedPage: SelectedPage;
@@ -10,7 +12,8 @@ type Props = {
 };
 
 const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const  isLargerScreenSize = useMediaQuery("min-width: 1060px")
 
   const flexBetween = "flex items-center justify-between";
   return (
@@ -22,6 +25,9 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
             <img alt="logo" src={Logo} />
 
             {/* RIGHT SIDE */}
+            { isLargerScreenSize ? (
+            
+          
             <div className={`${flexBetween} w-full`}>
               <div className={`${flexBetween} gap-8 text-sm`}>
                 <Link
@@ -45,7 +51,38 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                 />
               </div>
-            </div>
+               <div className={`${flexBetween} gap-8`}>
+                  <p>Sign In</p>
+                  <button>
+                    Become a Member
+                  </button>
+                </div>
+            </div>  
+    
+            ) : (
+           
+              <button
+                className="rounded-full bg-secondary-500 p-2"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                <Bars3Icon className="h-6 w-6 text-white" />
+              </button>
+            )
+
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+            
           </div>
         </div>
       </div>
