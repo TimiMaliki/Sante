@@ -1,13 +1,13 @@
-import Navbar from "./Pages/Navbar"
-
+import { useState } from "react";
+import Navbar from "./Pages/Navbar";
 
 function App() {
-
-  return (
+  const [selectedPage, setSelectedPage] = useState("home")
+  return ( 
     <div className="app bg-gray-20">
-    <Navbar/>
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
