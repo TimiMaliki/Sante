@@ -4,6 +4,7 @@ import Logo from "../assets/Logo.png";
 import Link from "./Link";
 import { SelectedPage } from "../shared/type";
 import useMediaQuery from "../hooks/mediaQuery";
+import ActionsButtons from "../shared/ActionsButtons";
 
 
 type Props = {
@@ -53,9 +54,10 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
               </div>
                <div className={`${flexBetween} gap-8`}>
                   <p>Sign In</p>
-                  <button>
-                    Become a Member
-                  </button>
+                 <ActionsButtons setSelectedPage={setSelectedPage}>
+                     Become a Member
+                 </ActionsButtons>
+                 
                 </div>
             </div>  
     
@@ -70,22 +72,46 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
             )
 
           }
-
-
-
-
-
-
-
-
-
-
-
-
             
           </div>
         </div>
       </div>
+ {/* MOBILE MENU MODAL */}
+      {!isLargerScreenSize && isMenuOpen && (
+        <div className="fixed right-0 bottom-0 z-40 h-full w-75 bg-red-200 drop-shadow-xl">
+          {/* CLOSE ICON */}
+          <div className="flex justify-end p-12">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <XMarkIcon className="h-6 w-6 text-gray-400" />
+            </button>
+          </div>
+
+          {/* MENU ITEMS */}
+          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+            <Link
+              page="Home"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="Benefits"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="Our Classes"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+            <Link
+              page="Contact Us"
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
+            />
+          </div>
+        </div>
+      )}
+
     </nav>
   );
 };
