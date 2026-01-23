@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./Pages/Navbar";
 import { SelectedPage } from "./shared/type";
 import Home from "./Pages/Home/Home";
+import ShuffleHero from "./Pages/Home/ShuffleHero";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -19,11 +20,12 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
   return (
-    <div className="app bg-gray-20">
+    <div className="app">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage}
         isTopOfPage={isTopOfPage}
       />
         <Home   setSelectedPage={setSelectedPage}/>
+        
     </div>
   );
 }
