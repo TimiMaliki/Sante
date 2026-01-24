@@ -16,7 +16,7 @@ type Props = {
 const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const  isLargerScreenSize = useMediaQuery("(min-width: 1060px)")  
-  const navbarBackround = isTopOfPage ? "" : "bg-yellow-600 drop-shadow"
+  const navbarBackround = isTopOfPage ? "" : "bg-red-200 drop-shadow"
   const flexBetween = "flex items-center justify-between";
   return (
     <nav>
@@ -31,7 +31,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
             
           
             <div className={`${flexBetween} w-full`}>
-              <div className={`${flexBetween} gap-8 text-sm`}>
+              <div className={`${flexBetween} gap-8 text-md text-black`}>
                 <Link
                   page="Home"
                   selectedPage={selectedPage}
@@ -54,7 +54,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
                 />
               </div>
                <div className={`${flexBetween} gap-8`}>
-                  <p>Sign In</p>
+                  <p className="text-black">Sign In</p>
                  <ActionsButtons setSelectedPage={setSelectedPage}>
                      Become a Member
                  </ActionsButtons>
@@ -65,7 +65,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
             ) : (
            
               <button
-                className="rounded-full bg-yellow-500 p-2"
+                className="rounded-full bg-blue-500 p-2"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
@@ -83,7 +83,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <XMarkIcon className="h-6 w-6 text-gray-400" />
+              <XMarkIcon className="h-6 w-6 teext-black" />
             </button>
           </div>
 
