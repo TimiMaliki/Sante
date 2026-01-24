@@ -38,7 +38,7 @@ const Home = ({ setSelectedPage }: Props) => {
             className="relative"
             >
               <div
-            className="absolute -top-20 before:-left-20 z-[-1]"
+            className="absolute -top-20 before:-left-20 z-[-1] hidden md:block"
               >
                  <img src={evolvetext} alt="" className="]" />
                </div>
@@ -52,7 +52,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </p>
           </div>
           {/* actions */}
-          <div>
+          <div   className="mt-8 flex items-center gap-8">
             <ActionsButtons setSelectedPage={setSelectedPage}>
               Join Now
             </ActionsButtons>
@@ -68,7 +68,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
 
         {/* image */}
-        <div>
+        <div className="flex basis-3/5 justify-center md:z-10  md:ml-40 md:mt-16 md:justify-items-end">
           <img src={HomePageGraphic} alt="Home-pageGraphics" />
         </div>
       </div>
@@ -76,9 +76,9 @@ const Home = ({ setSelectedPage }: Props) => {
     {/* Sponsors  */}
 
        {isLargerScreenSize && (
-        <div className="h-37.5 w-full bg-primary-100 py-10">
+        <div className="h-37.5 w-full bg-red-300 py-10">
           <div className="mx-auto w-5/6">
-            <div className="flex w-3/5 items-center justify-between gap-8">
+            <div className="flex w-full items-center  justify-between gap-8">
               <img alt="redbull-sponsor" src={SponsorRedBull} />
               <img alt="forbes-sponsor" src={SponsorForbes} />
               <img alt="fortune-sponsor" src={SponsorFortune} />
