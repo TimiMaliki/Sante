@@ -21,9 +21,9 @@ const Home = ({ setSelectedPage }: Props) => {
     <section id="home" className="gap-16  py-10 md:h-full md:pb-0">
 
       {/* Image And Main Header */}
-      <div 
+      <motion.div 
        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
-
+      onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
 
         {/* main header */}
@@ -60,7 +60,18 @@ const Home = ({ setSelectedPage }: Props) => {
             </p>
           </motion.div>
           {/* actions */}
-          <div   className="mt-8 flex items-center gap-8">
+          <motion.div
+            className="mt-8 flex items-center gap-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+           
+           >
             <ActionsButtons setSelectedPage={setSelectedPage}>
               Join Now
             </ActionsButtons>
@@ -71,7 +82,7 @@ const Home = ({ setSelectedPage }: Props) => {
             >
               <p>Learn More</p>
             </AnchorLink>
-          </div>
+          </motion.div>
         </div>
 
 
@@ -79,7 +90,7 @@ const Home = ({ setSelectedPage }: Props) => {
         <div className="flex basis-3/5 justify-center md:z-10  md:ml-40 md:mt-16 md:justify-items-end">
           <img src={HomePageGraphic} alt="Home-pageGraphics" />
         </div>
-      </div>
+      </motion.div>
 
     {/* Sponsors  */}
 
