@@ -1,6 +1,5 @@
-import ActionButton from "@/shared/ActionButton";
-import HText from "@/shared/HText";
-import { BenefitType, SelectedPage } from "@/shared/types";
+import HText from "../../shared/Htext";
+import { BenefitType, SelectedPage } from "../../shared/type";
 import {
   HomeModernIcon,
   UserGroupIcon,
@@ -8,7 +7,8 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
-import Benefit from "./Benefit";
+import Index from "./index";
+import ActionsButtons from "../../shared/ActionsButtons";
 
 const benefits: Array<BenefitType> = [
   {
@@ -77,7 +77,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           variants={container}
         >
           {benefits.map((benefit: BenefitType) => (
-            <Benefit
+            <Index
               key={benefit.title}
               icon={benefit.icon}
               title={benefit.title}
@@ -149,9 +149,9 @@ const Benefits = ({ setSelectedPage }: Props) => {
             {/* BUTTON */}
             <div className="relative mt-16">
               <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
-                <ActionButton setSelectedPage={setSelectedPage}>
+                <ActionsButtons setSelectedPage={setSelectedPage}>
                   Join Now
-                </ActionButton>
+                </ActionsButtons>
               </div>
             </div>
           </div>
