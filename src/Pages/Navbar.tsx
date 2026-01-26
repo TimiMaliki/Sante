@@ -16,8 +16,9 @@ type Props = {
 const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const  isLargerScreenSize = useMediaQuery("(min-width: 1060px)")  
-  const navbarBackround = isTopOfPage ? "" : "bg-red-200 drop-shadow"
+  const navbarBackround = isTopOfPage ? "" : "bg-red-700 drop-shadow"
   const flexBetween = "flex items-center justify-between";
+  
   return (
     <nav>
       <div className={`${navbarBackround}${flexBetween} fixed top-0 z-30 w-full py-6`}>
@@ -65,7 +66,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
             ) : (
            
               <button
-                className="rounded-full bg-blue-500 p-2"
+                className="rounded-full bg-red-700 p-2"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
@@ -79,16 +80,16 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
       </div>
  {/* MOBILE MENU MODAL */}
       {!isLargerScreenSize && isMenuOpen && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-75 bg-red-200 drop-shadow-xl">
+        <div className="fixed right-0 bottom-0 z-40 h-full w-75 bg-red-700 drop-shadow-xl">
           {/* CLOSE ICON */}
           <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              <XMarkIcon className="h-6 w-6 teext-black" />
+              <XMarkIcon className="h-6 w-6 text-white" />
             </button>
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+          <div className="ml-[33%] flex flex-col text-white gap-10 text-2xl">
             <Link
               page="Home"
               selectedPage={selectedPage}
