@@ -27,6 +27,7 @@ function App() {
       />
         <Home   setSelectedPage={setSelectedPage}/>
         <Benefits setSelectedPage={setSelectedPage}/>
+        <ShuffleHero />
     </div>
   );
 }
