@@ -3,6 +3,7 @@ import Navbar from "./Pages/Navbar";
 import { SelectedPage } from "./shared/type";
 import Home from "./Pages/Home/Home";
 import ShuffleHero from "./Pages/Home/ShuffleHero";
+import Benefits from "./Pages/Benefits/Benefits";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -25,7 +26,7 @@ function App() {
         isTopOfPage={isTopOfPage}
       />
         <Home   setSelectedPage={setSelectedPage}/>
-        
+        <Benefits setSelectedPage={setSelectedPage}/>
     </div>
   );
 }
