@@ -4,6 +4,7 @@ import { SelectedPage } from "./shared/type";
 import Home from "./Pages/Home/Home";
 import ShuffleHero from "./Pages/Home/ShuffleHero";
 import Benefits from "./Pages/Benefits/Benefits";
+import ContactUs from "./Pages/ContactUs/Contact";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -28,6 +29,7 @@ function App() {
         <Home   setSelectedPage={setSelectedPage}/>
         <Benefits setSelectedPage={setSelectedPage}/>
         <ShuffleHero />
+        <ContactUs setSelectedPage={setSelectedPage}/>
     </div>
   );
 }
