@@ -66,7 +66,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
             ) : (
            
               <button
-                className="rounded-full bg-red-700 p-2"
+                className="rounded-full bg-white p-2"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 <Bars3Icon className="h-6 w-6 text-white" />
