@@ -1,73 +1,171 @@
-# React + TypeScript + Vite
+# Sante (EvoGym Landing Page)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated fitness & gym landing page built with **React + TypeScript**, focused on smooth user experience, clean UI, and responsive design. This project showcases a multi‑section single‑page application with scroll‑based navigation, animations, and a fully functional contact form.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Project Overview
 
-## React Compiler
+**Sante** (also referred to as *EvoGym* in UI content) is a single‑page fitness website that includes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Sticky, scroll‑aware navigation bar
+* Smooth anchor‑based page navigation
+* Animated hero and content sections
+* Responsive layout for desktop & mobile
+* Interactive benefits section
+* Animated image shuffle grid
+* Contact form with validation
+* Clean, reusable component structure
 
-## Expanding the ESLint configuration
+The app tracks the currently visible section and updates navigation state automatically based on scroll position.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Main Sections
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Home** – Hero section, CTA buttons, sponsors banner
+* **Benefits** – Key gym features with animations
+* **Shuffle Hero** – Animated image grid using Framer Motion
+* **Contact Us** – Validated form with external submission
+* **Footer** – Branding, links, and contact details
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Tech Stack
+
+### Core Technologies
+
+* **React 19** – Component‑based UI
+* **TypeScript** – Type safety and scalability
+* **Vite** – Fast dev server & build tool
+
+### Styling & UI
+
+* **Tailwind CSS v4** – Utility‑first styling
+* **Heroicons** – Icon set
+* **Custom assets** – PNG graphics & branding
+
+### Animation & UX
+
+* **Framer Motion** – Page & component animations
+* **react-anchor-link-smooth-scroll** – Smooth scrolling navigation
+
+### Forms & Validation
+
+* **React Hook Form** – Lightweight form handling
+* **FormSubmit** – External form submission endpoint
+
+### Tooling
+
+* **ESLint** – Code quality
+* **Prettier + Tailwind Plugin** – Consistent formatting
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── Pages/
+│   ├── Navbar/
+│   ├── Home/
+│   ├── Benefits/
+│   ├── ContactUs/
+│   └── Footer/
+├── shared/
+│   ├── type.ts
+│   ├── ActionsButtons.tsx
+│   └── HText.tsx
+├── hooks/
+│   └── mediaQuery.ts
+├── assets/
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 Key Concepts Used
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Scroll position tracking with `useEffect`
+* Responsive rendering via custom `useMediaQuery` hook
+* Enum‑based page state (`SelectedPage`)
+* Motion variants for staggered animations
+* Reusable UI components
+* Mobile‑first responsive design
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repo-url>
+cd sante
 ```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run Development Server
+
+```bash
+npm run dev
+```
+
+The app will be available at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+To preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 📦 Scripts
+
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start dev server         |
+| `npm run build`   | Type‑check & build       |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint               |
+
+---
+
+## 🧪 Future Improvements
+
+* Add backend integration
+* Add dark mode
+* Convert to CMS‑driven content
+* Improve accessibility (ARIA)
+* SEO optimizations
+
+---
+
+## 👤 Author
+
+Built by **Berry Gold** — Frontend Developer
+
+---
+
+## 📄 License
+
+This project is private and intended for portfolio or client demonstration purposes.
