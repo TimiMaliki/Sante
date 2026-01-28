@@ -11,7 +11,7 @@ const Footer = () => {
             purus et arcu massa dictum condimentum. Augue scelerisque iaculis
             orci ut habitant laoreet. Iaculis tristique.
           </p>
-          <p className="text-white">© Evogym All Rights Reserved.</p>
+          <p className="text-white">© Evogym { new Date().getFullYear()} , All Rights Reserved</p>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0 text-white">
           <h4 className="font-bold">Links</h4>
