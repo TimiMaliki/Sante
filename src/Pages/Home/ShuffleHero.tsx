@@ -24,8 +24,8 @@ const ShuffleHero: React.FC = () => {
           Let&apos;s change it up a bit
         </h3>
         <p className="text-base md:text-lg text-black my-4 md:my-6">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam nobis in
-          error repellat voluptatibus ad.
+          Elevate your fitness experience with thoughtfully designed programs that
+          balance strength, movement, and performance.
         </p>
         <button className="bg-black text-white font-medium py-2 px-4 rounded transition-all hover:bg-700-600 cursor-pointer active:scale-95">
           Find a class

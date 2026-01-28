@@ -12,23 +12,24 @@ import ActionsButtons from "../../shared/ActionsButtons";
 
 const benefits: Array<BenefitType> = [
   {
-    icon: <HomeModernIcon className="h-6 w-6 text-black" />,
-    title: "State of the Art Facilities",
-    description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
-  },
-  {
-    icon: <UserGroupIcon className="h-6 w-6 text-black" />,
-    title: "100's of Diverse Classes",
-    description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
-  },
-  {
-    icon: <AcademicCapIcon className="h-6 w-6 text-black" />,
-    title: "Expert and Pro Trainers",
-    description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
-  },
+  icon: <HomeModernIcon className="h-6 w-6 text-black" />,
+  title: "State of the Art Facilities",
+  description:
+    "Train in a modern, fully equipped environment designed for performance and comfort. Our facilities feature cutting-edge equipment, spacious workout areas, and a clean, motivating atmosphere.",
+},
+{
+  icon: <UserGroupIcon className="h-6 w-6 text-black" />,
+  title: "100's of Diverse Classes",
+  description:
+    "From high-energy group workouts to focused strength and wellness sessions, our wide range of classes suits every fitness level, goal, and schedule.",
+},
+{
+  icon: <AcademicCapIcon className="h-6 w-6 text-black" />,
+  title: "Expert and Pro Trainers",
+  description:
+    "Work with certified professionals who are passionate about results. Our trainers provide personalized guidance, proper technique, and constant motivation to help you reach your full potential.",
+},
+
 ];
 
 const container = {
@@ -130,20 +131,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="my-5 text-black text-md ">
-                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
-                egestas ultrices consectetur adipiscing ultricies enim. Pulvinar
-                fames vitae vitae quis. Quis amet vulputate tincidunt at in
-                nulla nec. Consequat sed facilisis dui sit egestas ultrices
-                tellus. Ullamcorper arcu id pretium sapien proin integer nisl.
-                Felis orci diam odio.
+              <p className="my-5 text-black text-md">
+                Every detail of our gym is designed to support your progress. From structured
+                training programs to expert-led sessions, we focus on helping you build
+                strength, improve endurance, and stay consistent over time.
               </p>
-              <p className="mb-5 text-black text-md ">
-                Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                enim mattis odio in risus nunc.
+              <p className="mb-5 text-black text-md">
+                Whether your goal is fat loss, muscle gain, or overall wellness, you’ll train
+                in an environment that prioritizes safety, motivation, and measurable
+                results so you can perform at your best every day.
               </p>
+
             </motion.div>
 
             {/* BUTTON */}
