@@ -9,7 +9,7 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
+  const inputStyles = `mb-5 w-full rounded-lg bg-white border border-black text-black text-md
   px-5 py-3 placeholder-white`;
 
   const {
@@ -43,9 +43,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+            <span className="text-red-500">JOIN NOW</span> TO GET IN SHAPE
           </HText>
-          <p className="my-5">
+          <p className="my-5 text-black">
             Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
             sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
             adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
@@ -81,7 +81,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 })}
               />
               {errors.name && (
-                <p className="mt-1 text-primary-500">
+                <p className="mt-1 text-red-500">
                   {errors.name.type === "required" && "This field is required."}
                   {errors.name.type === "maxLength" &&
                     "Max length is 100 char."}
@@ -98,7 +98,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 })}
               />
               {errors.email && (
-                <p className="mt-1 text-primary-500">
+                <p className="mt-1 text-red-500">
                   {errors.email.type === "required" &&
                     "This field is required."}
                   {errors.email.type === "pattern" && "Invalid email address."}
@@ -116,7 +116,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
                 })}
               />
               {errors.message && (
-                <p className="mt-1 text-primary-500">
+                <p className="mt-1 text-red-500">
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
