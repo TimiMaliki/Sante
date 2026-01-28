@@ -13,7 +13,7 @@ const Footer = () => {
           <p className="text-white">© Evogym {new Date().getFullYear()} , All Rights Reserved</p>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0 text-white">
-          <h4 className="font-bold">Links</h4>
+          <h4 className="font-bold">Other Links</h4>
           <a href="https://www.easygym.fr/salle-de-sport/paris/paris-palais-royal?utm_source=GMB&utm_medium=Local_Inventory&utm_campaign=paris-palais-royal&utm_term=GP_generique&utm_content=website">
             <p className="my-5">easyGym Paris Palais Royal</p>
           </a>
