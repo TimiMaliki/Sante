@@ -26,7 +26,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
   };
 
   return (
-    <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
+    <section id="contact us" className="mx-auto w-5/6 pt-24 pb-32">
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}
       >
@@ -46,10 +46,11 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <span className="text-red-500">JOIN NOW</span> TO GET IN SHAPE
           </HText>
           <p className="my-5 text-black">
-            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-            sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-            adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+            We help you train smarter, move better, and feel stronger every day. Our
+            programs are designed by professionals to support real results whether
+            you're just starting out or pushing past your limits.
           </p>
+
         </motion.div>
 
         {/* FORM AND IMAGE */}
