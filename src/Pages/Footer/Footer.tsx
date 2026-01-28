@@ -15,9 +15,9 @@ const Footer = () => {
         </div>
         <div className="mt-16 basis-1/4 md:mt-0 text-white">
           <h4 className="font-bold">Links</h4>
-          <p className="my-5">Massa orci senectus</p>
-          <p className="my-5">Et gravida id et etiam</p>
-          <p>Ullamcorper vivamus</p>
+          <a href=""><p className="my-5">Massa orci senectus</p></a>
+          <a href=""><p className="my-5">Et gravida id et etiam</p></a>
+          <a href=""><p>Ullamcorper vivamus</p></a>
         </div>
         <div className="mt-16 basis-1/4 md:mt-0 text-white">
           <h4 className="font-bold">Contact Us</h4>
