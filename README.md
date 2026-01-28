@@ -162,7 +162,7 @@ npm run preview
 
 ## 👤 Author
 
-Built by **Berry Gold** — Frontend Developer
+Built by **Timi Maliki** — Frontend Developer
 
 ---
 
