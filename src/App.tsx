@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import ShuffleHero from "./Pages/Home/ShuffleHero";
 import Benefits from "./Pages/Benefits/Benefits";
 import ContactUs from "./Pages/ContactUs/Contact";
+import Footer from "./Pages/Footer/Footer";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
@@ -30,6 +31,7 @@ function App() {
         <Benefits setSelectedPage={setSelectedPage}/>
         <ShuffleHero />
         <ContactUs setSelectedPage={setSelectedPage}/>
+        <Footer/>
     </div>
   );
 }
