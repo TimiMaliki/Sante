@@ -131,12 +131,12 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="my-5 text-black text-md">
+              <p className="my-5 text-black text-lg">
                 Every detail of our gym is designed to support your progress. From structured
                 training programs to expert-led sessions, we focus on helping you build
                 strength, improve endurance, and stay consistent over time.
               </p>
-              <p className="mb-5 text-black text-md">
+              <p className="mb-5 text-black text-lg">
                 Whether your goal is fat loss, muscle gain, or overall wellness, you’ll train
                 in an environment that prioritizes safety, motivation, and measurable
                 results so you can perform at your best every day.
@@ -145,13 +145,13 @@ const Benefits = ({ setSelectedPage }: Props) => {
             </motion.div>
 
             {/* BUTTON */}
-            <div className="relative mt-16">
+            {/* <div className="relative mt-16">
               <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
                 <ActionsButtons setSelectedPage={setSelectedPage}>
                   Join Now
                 </ActionsButtons>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </motion.div>
