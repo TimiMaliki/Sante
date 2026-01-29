@@ -8,7 +8,7 @@ import {
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 import Index from "./index";
-import ActionsButtons from "../../shared/ActionsButtons";
+// import ActionsButtons from "../../shared/ActionsButtons";
 
 const benefits: Array<BenefitType> = [
   {
