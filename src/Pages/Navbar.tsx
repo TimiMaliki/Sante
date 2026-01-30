@@ -16,7 +16,7 @@ type Props = {
 const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const  isLargerScreenSize = useMediaQuery("(min-width: 1060px)")  
-  const navbarBackround = isTopOfPage ? "bg-white/100 text-black " : "bg-white/50  text-black"
+  const navbarBackround = isTopOfPage ? "bg-white/100 text-black " : "bg-white/50 text-black"
   const flexBetween = "flex items-center justify-between";
   
   return (
@@ -32,7 +32,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
             
           
             <div className={`${flexBetween} w-full`}>
-              <div className={`${flexBetween} gap-8 text-md ${navbarBackround}`}>
+              <div className={`${flexBetween} gap-8 text-md text-black`}>
                 <Link
                   page="Home"
                   selectedPage={selectedPage}
@@ -50,7 +50,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
                 />
               </div>
                <div className={`${flexBetween} gap-8`}>
-                  <p className={`${navbarBackround} cursor-pointer`}>Sign In</p>
+                  <p className={` text-black cursor-pointer`}>Sign In</p>
                  <ActionsButtons setSelectedPage={setSelectedPage}>
                      Become a Member
                  </ActionsButtons>
