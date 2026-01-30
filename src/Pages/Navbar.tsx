@@ -16,7 +16,7 @@ type Props = {
 const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const  isLargerScreenSize = useMediaQuery("(min-width: 1060px)")  
-  const navbarBackround = isTopOfPage ? "bg-white text-black " : "bg-red-700 text-white"
+  const navbarBackround = isTopOfPage ? "bg-white/100 text-black " : "bg-white/50  text-black"
   const flexBetween = "flex items-center justify-between";
   
   return (
@@ -40,11 +40,6 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
                 />
                 <Link
                   page="Benefits"
-                  selectedPage={selectedPage}
-                  setSelectedPage={setSelectedPage}
-                />
-                <Link
-                  page="Our Programs"
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                 />
@@ -89,7 +84,7 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
           </div>
 
           {/* MENU ITEMS */}
-          <div className="ml-[33%] flex flex-col text-white gap-10 text-2xl">
+          <div className="ml-[33%] flex flex-col  gap-10 text-2xl">
             <Link
               page="Home"
               selectedPage={selectedPage}
@@ -97,11 +92,6 @@ const Navbar = ({ isTopOfPage,selectedPage, setSelectedPage }: Props) => {
             />
             <Link
               page="Benefits"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Our Classes"
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage}
             />

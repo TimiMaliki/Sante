@@ -95,7 +95,7 @@ const Home = ({ setSelectedPage }: Props) => {
     {/* Sponsors  */}
 
        {isLargerScreenSize && (
-        <div className="h-37.5 w-full bg-red-700 py-10">
+        <div className="h-37.5 w-full bg-white py-10">
           <div className="mx-auto w-5/6">
             <div className="flex w-full items-center  justify-between gap-8">
               <img alt="redbull-sponsor" src={SponsorRedBull} />

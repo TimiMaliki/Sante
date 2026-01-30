@@ -3,8 +3,7 @@ import type { JSX } from "react";
 export enum SelectedPage{
     Home = "home",
     Benefits = "benefits",
-    OurPrograms = "ourprograms",
-    ContactUs = "contact us"
+    ContactUs = "contactus"
  }
 
  export interface BenefitType {
